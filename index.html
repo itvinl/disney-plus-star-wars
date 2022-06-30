@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney+ | Filmes Star Wars</title>
+    <meta name="description" content="Plataforma da Disney+" />
+    <link rel="shortcut icon" type="image/jpg" href="./assets/Disney Favicon.png"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <!-- LinkedIn and GitHub: itvinl -->
+</head>
+<body>
+    <div id="app">
+        <div class="app_image">
+            <img
+            loading="lazy"
+            alt="Imagem do Filme em Destaque"
+            src="https://image.tmdb.org/t/p/original/k6EOrckWFuz7I4z4wiRwz8zsj4H.png">
+        </div>
+        <header>
+            <img class="logo" src="./assets/Logo_Disney_StarWars.png" alt="Logo da Disney+" width="180px">
+            <button type="button" class="button_menu" onclick="changeButtonMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- <nav class="navigation">
+                <h2>Filmes</h2>
+                <ul id="Movies_List_Mobile">
+                </ul>
+            </nav> -->
+        </header>
+
+        <main>
+            <section class="feature_movie">
+                <div class="rating">
+                    <img src="./assets/logo-imdb.png" alt="Logo da IMDB">
+                    <strong></strong>
+                </div>
+                <span></span>
+                <h1></h1>
+                <p></p>
+                <div class="buttons">
+                    <button class="watch">
+                        <img src="./assets/icon-play.png" alt="Ícone de Play">
+                        ASSISTIR
+                    </button>
+                    <section class="trailer"> 
+                        <button>
+                            <img src="./assets/X-Wing.png" alt="Ícone de Trailer">
+                            TRAILER
+                        </button>
+                    </section>
+                </div>
+            </section>
+            <aside class="movies">
+                <h2>Filmes</h2>
+                <div>
+                    <ul id="Movies_List">
+                    </ul>
+                </div>
+            </aside>
+            <nav class="navigation">
+                <h2>Filmes</h2>
+                <ul id="Movies_List_Mobile">
+                </ul>
+            </nav>
+        </main>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
