@@ -3,8 +3,7 @@
 </h1>
 
 <p align="left">
-  <img src="./github/Interface.png" width="80.08%"/>
-  <img src="./github/Interface_Mobile.png" width="19.4%"/>
+  <img src="./github/Interface.png" width="100%"/>
 </p>
 
 ## 🖥 Descrição do Projeto
