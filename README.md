@@ -2,8 +2,9 @@
   Recriação da Interface do Disney Plus na Temática Star Wars
 </h1>
 
-<p align="center">
-  <img src="./github/Interface.png" width="100%" />
+<p align="left">
+  <img src="./github/Interface.png" width="80.08%"/>
+  <img src="./github/Interface_Mobile.png" width="19.4%"/>
 </p>
 
 ## 🖥 Descrição do Projeto
