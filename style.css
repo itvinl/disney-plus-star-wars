@@ -1,0 +1,1459 @@
+/* Global Presets*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #fff;
+
+    --linear: linear-gradient(154.23deg, #0F3A7b -58.45%, #0CFFFF 374,49%);
+}
+
+html {
+    background-color: #000000;
+}
+
+body, button, textarea, input {
+    color: var(--primary);
+    font: 400 1rem "Montserrat", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* App Presets*/
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    height: 100vh;
+    padding: 4px 80px;
+    position: relative;
+    overflow: hidden;                 
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app_image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.app_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app_image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90.18deg, rgba(0, 0, 0, 0.9) 23.21%, rgba(13, 22, 46, 0.0001) 96.69%);
+}
+
+.app_image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(280deg, rgba(0, 0, 0, 0.7) 23.21%, rgba(13, 22, 46, 0.0001) 50.69%);
+}
+
+/* Header Presets*/
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.button_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 4px;
+    width: 25px;
+    background: transparent;
+}
+
+.button_menu span {
+    width: 100%;
+    height: 3px;
+    border-radius: 6px;
+    display: block;
+    background: var(--primary);
+    transition: all 0.6s;
+}
+
+.button_menu span:last-child {
+    width: 80%;
+}
+
+.button_menu.act span:last-child {
+    width: 100%;
+    transform: rotate(45deg) translateY(-2px) translateX(-4px);
+}
+
+.button_menu.act span:nth-child(1) {
+    transform: rotate(-45deg) translateY(6px) translateX(-8px);
+}
+
+.button_menu.act span:nth-child(2) {
+    opacity: 0;
+}
+
+/* Movie Presets */
+.feature_movie {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+
+.trailer button {
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 550;
+    margin-top: 20px;
+    margin-left: 25px;
+    width: 110px;
+    height: 55px;
+    padding: auto;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.329);
+    color: rgb(224, 224, 224);
+    box-shadow: 0px 3px 50px rgba(255, 255, 255, 0.160784);
+    border: solid 1px rgb(224, 224, 224);
+    transition: all 0.3s;
+    position: absolute;
+}
+
+.trailer button:hover {
+    background: rgba(0, 0, 0, 0.534);
+    color: transparent;
+    border: solid 1px #707070;
+    box-shadow: 0 0 10px rgb(107, 107, 107);
+}
+
+.trailer button img {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s;
+    left: 18.5px;
+    position: absolute;
+    width: 70px;
+}
+
+.trailer button:hover img {
+    opacity: 0.9;
+    transform: translateY(-3px);
+}
+
+.pointerlogo {
+    cursor: pointer;
+    z-index: 10;
+}
+
+#logo {
+    width: 180px;
+    background-image: url("./assets/Star_Wars_White_Saber.png");
+    background-size: 180px;
+}
+
+#btnimg {
+    display: none;
+}
+
+#btnimg:checked + label > img {
+    animation-name: saber;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes saber {
+    0% {
+        background-image: url("./assets/Star_Wars_White_Saber.png");
+        background-size: 180px;
+    }
+
+    20% {
+        background-image: url("./assets/Star_Wars_Blue_Saber.png");
+        background-size: 180px;
+    }
+
+    40% {
+        background-image: url("./assets/Star_Wars_Orange_Saber.png");
+        background-size: 180px;
+    }
+
+    60% {
+        background-image: url("./assets/Star_Wars_Red_Saber.png");
+        background-size: 180px;
+    }
+
+    80% {
+        background-image: url("./assets/Star_Wars_Green_Saber.png");
+        background-size: 180px;
+    }
+
+    100% {
+        background-image: url("./assets/Star_Wars_Purple_Saber.png");
+        background-size: 180px;
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: initial;
+}
+
+.feature_movie span, .rating strong, .feature_movie button {
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+}
+
+.feature_movie h1 {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    font-weight: 700;
+}
+
+.feature_movie p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+    width: 100%;
+    max-width: 390px;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+
+.watch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-top: 20px;
+    width: 145px;
+    height: 55px;
+    padding: 0 25px ;
+    border-radius: 5px;
+    background: rgb(224, 224, 224);
+    color: black;
+    transition: all 1s;
+}
+
+.watch:hover {
+    box-shadow: 0 0 35px #fff;
+    transition: all 1s;
+}
+
+.watch img {
+    width: 15px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.rating strong {
+    line-height: 1.5rem;
+    font-weight: 600;
+    /* max-width: 3.2ch;
+    overflow: hidden; */
+}
+
+.rating img {
+    width: 35px;
+}
+
+/* Movies Presets*/
+
+.movies {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    transition: all 0.6s;
+}
+
+.menu {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.6s;
+    pointer-events: none;
+}
+
+.movies h2 {
+    font-size: 1.2rem;
+    line-height: 1rem;
+    font-weight: 700;
+}
+
+.movies > div {
+    height: 410px;
+    overflow: auto;
+    padding-right: 30px;
+}
+
+.movies ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 195px;
+    height: 115px;
+    border-radius: 8px;
+    position: relative;
+    padding-bottom: 10px;
+    padding-left: 11px;
+    padding-right: 11px;
+    background-image: linear-gradient(180deg, rgba(14, 23, 47, 0.0001) 11.72%, #000000 100%);
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.movie span {
+    font-size: 0.7rem;
+    line-height: 0.2rem;
+    font-weight: 400;
+    margin-bottom: 6px;
+    transition: all 0.2s;
+}
+
+.movie.active span {
+    transform: translateY(-3px);
+}
+
+.movie strong {
+    font-size: 0.7rem;
+    line-height: 1rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.movie.active strong {
+    transform: translateY(-3px);
+}
+
+.movie button {
+    position: absolute;
+    inset: 0;
+    margin: 35px auto;
+    background: transparent;
+    width: 36px;
+    height: 36px;
+    opacity: 0;
+    transition: all 0.4s;
+    transform: translateY(40px);
+}
+
+.movie:hover button {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.movie.active button{
+    display: none;
+}
+
+.movie:not(:first-child) {
+    margin-top: 20px;
+}
+
+.movies > div::-webkit-scrollbar {
+    width: 0.2rem;
+}
+
+.movies > div::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.movies > div::-webkit-scrollbar-thumb {
+    background: var(--primary);
+}
+
+.movie_image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transition: all 0.1s;
+}
+
+.movie.active .movie_image {
+    filter: grayscale(100%);
+    border: 4px solid rgb(31, 31, 31);
+    border-radius: 10px;
+}
+
+.movie.active:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+
+.movie.active:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+    filter: blur(40px);
+}
+
+.movie.active:before, .movie.active:after {
+    background: linear-gradient(235deg, #7c7b7b, #0c0606, #000000);
+}
+
+.movie_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie.active .movie_image img {
+    border-radius: 4px;
+}
+
+#Movies_List .movie.active {
+    background-image: url('./assets/Hope.png');
+    background-repeat: no-repeat;
+    background-size: 38px;
+    background-position: 0px 10px;
+    transition: all 0.4s;
+}
+
+/*Navigation*/
+.navigation {
+    display: none;
+}
+
+/*Responsive*/
+@media (max-width: 1080px) {
+    /* Laptop */
+    html {
+        font-size: 90%;
+    }
+
+    /* #app {
+        padding: 40px;
+    } */
+
+    .feature_movie p {
+        max-width: 360px;
+    }
+
+    header {
+        margin-bottom: 10%;
+    }
+
+    .rating img {
+        width: 30px;
+    }
+
+    #logo {
+        width: 170px;
+        transition: all 0.4s;
+        background-size: 170px;
+    }
+
+    #btnimg:checked + label > img {
+        animation-name: saber;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes saber {
+        0% {
+            background-image: url("./assets/Star_Wars_White_Saber.png");
+            background-size: 170px;
+            z-index: 1;
+        }
+    
+        20% {
+            background-image: url("./assets/Star_Wars_Blue_Saber.png");
+            background-size: 170px;
+            z-index: 1;
+        }
+    
+        40% {
+            background-image: url("./assets/Star_Wars_Orange_Saber.png");
+            background-size: 170px;
+            z-index: 1;
+        }
+    
+        60% {
+            background-image: url("./assets/Star_Wars_Red_Saber.png");
+            background-size: 170px;
+            z-index: 1;
+        }
+    
+        80% {
+            background-image: url("./assets/Star_Wars_Green_Saber.png");
+            background-size: 170px;
+            z-index: 1;
+        }
+    
+        100% {
+            background-image: url("./assets/Star_Wars_Purple_Saber.png");
+            background-size: 170px;
+            z-index: 1;
+        }
+    }
+
+    .button_menu {
+        row-gap: 3.5px;
+        width: 23px;
+        margin-top: -13px;
+        opacity: 0.9;
+        transition: all 0.4s;
+    }
+
+    .feature_movie {
+        row-gap: 15px;
+    }
+
+    .feature_movie h1 {
+        line-height: 2rem;
+    }
+
+    .feature_movie button {
+        font-size: 0.94rem;
+    }
+
+    .watch {
+        margin-top: 20px;
+        width: 120px;
+        height: 48px;
+        padding: 0 16px;
+        transition: all 0.4s;
+    }
+
+    .watch img {
+        width: 13px;
+    }
+
+    .trailer button {
+        margin-top: 20px;
+        margin-left: 17px;
+        width: 93px;
+        height: 47.5px;
+        padding: auto;
+    }
+    
+    .trailer button img {
+        margin-left: -2.5px;
+        margin-top: 1px;
+        width: 60px;
+    }
+
+    .movies {
+        row-gap: 15px;
+    }
+    
+    .movies h2 {
+        font-size: 1rem;
+        line-height: 0.6rem;
+        font-weight: 700;
+    }
+    
+    .movies > div {
+        height: 330px;
+        padding-right: 20px;
+    }
+    
+    .movie {
+        width: 175px;
+        height: 105px;
+        padding-bottom: 8px;
+    }
+    
+    .movie span {
+        font-size: 0.69rem;
+        line-height: 0.2rem;
+    }
+    
+    .movie strong {
+        font-size: 0.69rem;
+    }
+    
+    .movie button {
+        margin: 28px auto;
+    }
+    
+    #Movies_List .movie.active {
+        background-size: 33px;
+    }
+
+    .button_menu.act span:last-child {
+        width: 100%;
+        transform: rotate(45deg) translateY(-1px) translateX(-4px);
+    }
+    
+    .button_menu.act span:nth-child(1) {
+        transform: rotate(-45deg) translateY(4px) translateX(-8px);
+    }
+}
+
+@media (max-width: 837px) {
+    /* Tablet */
+    html {
+        font-size: 87.5%;
+    }
+    
+    #movies_nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        list-style: none;
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    #app {
+        padding: 24px;
+    }
+
+    .movies {
+        display: none;
+    }
+
+    header {
+        margin-bottom: 50%;
+    }
+
+    .rating img {
+        width: 32px;
+    }
+
+    #logo {
+        width: 170px;
+        background-size: 170px;
+        transition: all 0.4s;
+        z-index: 6;
+    }
+
+    #btnimg:checked + label > img {
+        animation-name: saber;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes saber {
+        0% {
+            background-image: url("./assets/Star_Wars_White_Saber.png");
+            background-size: 170px;
+            z-index: 7;
+        }
+    
+        20% {
+            background-image: url("./assets/Star_Wars_Blue_Saber.png");
+            background-size: 170px;
+            z-index: 7;
+        }
+    
+        40% {
+            background-image: url("./assets/Star_Wars_Orange_Saber.png");
+            background-size: 170px;
+            z-index: 7;
+        }
+    
+        60% {
+            background-image: url("./assets/Star_Wars_Red_Saber.png");
+            background-size: 170px;
+            z-index: 7;
+        }
+    
+        80% {
+            background-image: url("./assets/Star_Wars_Green_Saber.png");
+            background-size: 170px;
+            z-index: 7;
+        }
+    
+        100% {
+            background-image: url("./assets/Star_Wars_Purple_Saber.png");
+            background-size: 170px;
+            z-index: 7;
+        }
+    }
+
+    .button_menu {
+        row-gap: 3.5px;
+        width: 23px;
+        margin-top: -13px;
+        opacity: 0.9;
+        transition: all 0.4s;
+        z-index: 6;
+    }
+
+    .feature_movie {
+        row-gap: 15px;
+    }
+
+    .feature_movie h1 {
+        line-height: 2rem;
+    }
+
+    .feature_movie button {
+        font-size: 0.94rem;
+    }
+
+    .watch {
+        margin-top: 20px;
+        width: 120px;
+        height: 48px;
+        padding: 0 16px;
+        transition: all 0.4s;
+    }
+
+    .watch img {
+        width: 13.5px;
+    }
+
+    .trailer button {
+        margin-top: 20px;
+        margin-left: 17px;
+        width: 93px;
+        height: 47.5px;
+        padding: auto;
+    }
+    
+    .trailer button img {
+        margin-left: -4.5px;
+        margin-top: 0px;
+        width: 65px;
+    }
+
+    .app_image::after {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 23.21%, rgba(13, 22, 46, 0.0001) 75%);
+    }
+    
+    .app_image::before {
+        background: linear-gradient(1deg, rgba(0, 0, 0, 0.7) 23.21%, rgba(13, 22, 46, 0.0001) 85%);
+    }
+
+    .feature_movie p {
+        max-width: 350px;
+    }
+
+    .app_image {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+    }
+    
+    .app_image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Menu Rotate Mobile */
+    .navigation {
+        position: fixed;
+        display: flex;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #111111;
+        transform: translateY(100%);
+        z-index: 1;
+        transition: all 0.6s;
+        padding-top: 90px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #Movies_List_Mobile {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 16px;
+        list-style: none;
+        margin-top: 65px;
+    }
+
+    #Movies_List_Mobile li {
+        margin-left: 0px;
+        margin-right: 5%;
+    }
+
+    .navigation ul {
+        height: 90%;
+        overflow: auto;
+        padding-right: 50px;
+        overflow-x: hidden;
+    }
+
+    .navigation ul::-webkit-scrollbar {
+        width: 0.2rem;
+    }
+    
+    .navigation ul::-webkit-scrollbar-track {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+    
+    .navigation ul::-webkit-scrollbar-thumb {
+        background: var(--primary);
+    }
+
+    .movie {
+        width: 150px;
+        height: 100px;
+        padding-bottom: 8px;
+        border-radius: 0px;
+    }
+
+    #Movies_List_Mobile .movie.active {
+        background-size: 28px;
+    }
+
+    .movie:not(:first-child), .movie {
+        margin-top: 10px;
+    }
+    
+    .navigation.actv {
+        transform: translateY(0%);
+    }
+    
+    .navigation h2 {
+        position: fixed;
+        font-size: 1.2rem;
+        line-height: 0.9rem;
+        font-weight: 700;
+        color: #dad8d8;
+        margin-top: 35px;
+    }
+    
+    .movie.active:before, .movie.active:after {
+        background: linear-gradient(235deg, transparent, transparent, transparent);
+    }
+    
+    .movie.active .movie_image img {
+        border-radius: 0px;
+    }
+
+    #Movies_List_Mobile .movie.active {
+        background-image: url('./assets/Hope.png');
+        background-repeat: no-repeat;
+        background-size: 31px;
+        background-position: 0px 10px;
+        transition: all 0.4s;
+    }
+
+    .movie.active .movie_image {
+        filter: grayscale(100%);
+        border: 4px solid rgb(31, 31, 31);
+        border-radius: 0px;
+    }
+    
+    .movie.active:before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -1;
+    }
+    
+    .movie.active:after {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -1;
+        filter: blur(40px);
+    }
+    
+    .movie.active:before, .movie.active:after {
+        background: linear-gradient(235deg, #7c7b7b, #0c0606, #000000);
+    }
+
+    .movie button {
+        margin: 25px auto;
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 768px) {
+    /**/
+    html {
+        font-size: 70%;
+    }
+
+    header {
+        margin-top: 1%;
+        margin-bottom: 5%;
+    }
+
+    .rating img {
+        width: 20px;
+    }
+
+    #logo {
+        width: 145px;
+        background-size: 145px;
+        transition: all 0.4s;
+        z-index: 6;
+    }
+
+    #btnimg:checked + label > img {
+        animation-name: saber;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes saber {
+        0% {
+            background-image: url("./assets/Star_Wars_White_Saber.png");
+            background-size: 145px;
+            z-index: 7;
+        }
+    
+        20% {
+            background-image: url("./assets/Star_Wars_Blue_Saber.png");
+            background-size: 145px;
+            z-index: 7;
+        }
+    
+        40% {
+            background-image: url("./assets/Star_Wars_Orange_Saber.png");
+            background-size: 145px;
+            z-index: 7;
+        }
+    
+        60% {
+            background-image: url("./assets/Star_Wars_Red_Saber.png");
+            background-size: 145px;
+            z-index: 7;
+        }
+    
+        80% {
+            background-image: url("./assets/Star_Wars_Green_Saber.png");
+            background-size: 145px;
+            z-index: 7;
+        }
+    
+        100% {
+            background-image: url("./assets/Star_Wars_Purple_Saber.png");
+            background-size: 145px;
+            z-index: 7;
+        }
+    }
+
+    .button_menu {
+        row-gap: 3px;
+        width: 20px;
+        margin-top: -15px;
+        opacity: 0.9;
+        transition: all 0.4s;
+        z-index: 6;
+    }
+
+    .feature_movie {
+        row-gap: 10px;
+    }
+
+    .feature_movie h1 {
+        line-height: 1.5rem;
+    }
+
+    .feature_movie button {
+        font-size: 0.87rem;
+    }
+
+    .watch {
+        margin-top: 5px;
+        width: 85px;
+        height: 35px;
+        padding: 0 13px;
+        transition: all 0.4s;
+    }
+
+    .watch img {
+        width: 7px;
+    }
+
+    .trailer button {
+        margin-top: 5px;
+        margin-left: 15px;
+        width: 65px;
+        height: 34px;
+        padding: auto;
+    }
+    
+    .trailer button img {
+        margin-left: -4.5px;
+        margin-top: 4px;
+        width: 35px;
+    }
+
+    .app_image {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+    }
+    
+    .app_image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .app_image::after {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 23.21%, rgba(13, 22, 46, 0.0001) 75%);
+    }
+    
+    .app_image::before {
+        background: linear-gradient(1deg, rgba(0, 0, 0, 0.7) 23.21%, rgba(13, 22, 46, 0.0001) 85%);
+    }
+
+    .feature_movie p {
+        max-width: 270px;
+    }
+
+    /* Menu Rotate Mobile */
+    .navigation {
+        position: fixed;
+        display: flex;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #111111;
+        transform: translateY(100%);
+        z-index: 1;
+        transition: all 0.6s;
+        padding-top: 90px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #Movies_List_Mobile {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 16px;
+        list-style: none;
+        margin-top: 10px;
+    }
+
+    #Movies_List_Mobile li {
+        margin-left: 0px;
+        margin-right: 5%;
+    }
+
+    .navigation ul {
+        height: 90%;
+        overflow: auto;
+        padding-right: 50px;
+        overflow-x: hidden;
+    }
+
+    .navigation ul::-webkit-scrollbar {
+        width: 0.2rem;
+    }
+    
+    .navigation ul::-webkit-scrollbar-track {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+    
+    .navigation ul::-webkit-scrollbar-thumb {
+        background: var(--primary);
+    }
+
+    .movie {
+        width: 150px;
+        height: 100px;
+        padding-bottom: 8px;
+        border-radius: 0px;
+    }
+
+    #Movies_List_Mobile .movie.active {
+        background-size: 28px;
+    }
+
+    .movie:not(:first-child), .movie {
+        margin-top: 10px;
+    }
+    
+    .navigation.actv {
+        transform: translateY(0%);
+    }
+    
+    .navigation h2 {
+        position: fixed;
+        font-size: 1.2rem;
+        line-height: 0.9rem;
+        font-weight: 700;
+        color: #dad8d8;
+        margin-top: -6px;
+    }
+    
+    .movie.active:before, .movie.active:after {
+        background: linear-gradient(235deg, transparent, transparent, transparent);
+    }
+    
+    .movie.active .movie_image img {
+        border-radius: 0px;
+    }
+
+    #Movies_List_Mobile .movie.active {
+        background-image: url('./assets/Hope.png');
+        background-repeat: no-repeat;
+        background-size: 31px;
+        background-position: 0px 10px;
+        transition: all 0.4s;
+    }
+
+    .movie.active .movie_image {
+        filter: grayscale(100%);
+        border: 4px solid rgb(31, 31, 31);
+        border-radius: 0px;
+    }
+    
+    .movie.active:before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -1;
+    }
+    
+    .movie.active:after {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -1;
+        filter: blur(40px);
+    }
+    
+    .movie.active:before, .movie.active:after {
+        background: linear-gradient(235deg, #7c7b7b, #0c0606, #000000);
+    }
+
+    .movie button {
+        margin: 25px auto;
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 600px) {
+    /* Mobile */
+    html {
+        font-size: 80%;
+    }
+
+    #app {
+        padding: 16px;
+    }
+
+    .menu {
+        opacity: 0;
+        transform: translateY(-90px);
+        transition: all 0.6s;
+        pointer-events: none;
+    }
+
+    header {
+        margin-top: 15px;
+        margin-bottom: 35%;
+    }
+
+    .rating img {
+        width: 23px;
+    }
+
+    #logo {
+        width: 150px;
+        background-size: 150px;
+        transition: all 0.4s;
+        z-index: 6;
+    }
+
+    #btnimg:checked + label > img {
+        animation-name: saber;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes saber {
+        0% {
+            background-image: url("./assets/Star_Wars_White_Saber.png");
+            background-size: 150px;
+            z-index: 7;
+        }
+    
+        20% {
+            background-image: url("./assets/Star_Wars_Blue_Saber.png");
+            background-size: 150px;
+            z-index: 7;
+        }
+    
+        40% {
+            background-image: url("./assets/Star_Wars_Orange_Saber.png");
+            background-size: 150px;
+            z-index: 7;
+        }
+    
+        60% {
+            background-image: url("./assets/Star_Wars_Red_Saber.png");
+            background-size: 150px;
+            z-index: 7;
+        }
+    
+        80% {
+            background-image: url("./assets/Star_Wars_Green_Saber.png");
+            background-size: 150px;
+            z-index: 7;
+        }
+    
+        100% {
+            background-image: url("./assets/Star_Wars_Purple_Saber.png");
+            background-size: 150px;
+            z-index: 7;
+        }
+    }
+
+    .button_menu {
+        row-gap: 3px;
+        width: 21.5px;
+        margin-top: -10px;
+        opacity: 0.9;
+        transition: all 0.4s;
+        z-index: 6;
+    }
+
+    .button_menu span:last-child {
+        width: 60%;
+    }
+
+    .feature_movie {
+        row-gap: 15px;
+    }
+
+    .feature_movie h1 {
+        line-height: 1.8rem;
+    }
+
+    .feature_movie button {
+        font-size: 0.89rem;
+    }
+
+    .watch {
+        margin-top: 20px;
+        width: 105px;
+        height: 48px;
+        padding: 0 17px;
+        transition: all 0.4s;
+    }
+
+    .watch img {
+        width: 11px;
+    }
+
+    .trailer button {
+        margin-top: 20px;
+        margin-left: 15px;
+        width: 85px;
+        height: 47.5px;
+        padding: auto;
+    }
+    
+    .trailer button img {
+        margin-left: -2px;
+        margin-top: 1px;
+        width: 50px;
+    }
+
+    .app_image::after {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 23.21%, rgba(13, 22, 46, 0.0001) 75%);
+    }
+    
+    .app_image::before {
+        background: linear-gradient(1deg, rgba(0, 0, 0, 0.7) 23.21%, rgba(13, 22, 46, 0.0001) 85%);
+    }
+
+    .feature_movie p {
+        max-width: 315px;
+    }
+
+    /* Menu Mobile */
+    .navigation {
+        position: fixed;
+        display: flex;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #111111;
+        transform: translateY(100%);
+        z-index: 1;
+        transition: all 0.6s;
+        padding-top: 90px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #Movies_List_Mobile {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        list-style: none;
+        margin-top: 32px;
+    }
+
+    #Movies_List_Mobile li {
+        margin-left: 0px;
+        margin-right: 5%;
+    }
+
+    .navigation ul {
+        height: 90%;
+        overflow: auto;
+        padding-right: 50px;
+        overflow-x: hidden;
+    }
+
+    .navigation ul::-webkit-scrollbar {
+        width: 0.2rem;
+    }
+    
+    .navigation ul::-webkit-scrollbar-track {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+    
+    .navigation ul::-webkit-scrollbar-thumb {
+        background: var(--primary);
+    }
+
+    .movie {
+        width: 150px;
+        height: 100px;
+        padding-bottom: 8px;
+        border-radius: 0px;
+    }
+
+    #Movies_List_Mobile .movie.active {
+        background-size: 28px;
+    }
+
+    .movie:not(:first-child), .movie {
+        margin-top: 10px;
+    }
+    
+    .navigation.actv {
+        transform: translateY(0%);
+    }
+    
+    .navigation h2 {
+        position: fixed;
+        font-size: 1.2rem;
+        line-height: 0.9rem;
+        font-weight: 700;
+        color: #dad8d8;
+        margin-top: 0px;
+    }
+    
+    .movie.active:before, .movie.active:after {
+        background: linear-gradient(235deg, transparent, transparent, transparent);
+    }
+    
+    .movie.active .movie_image img {
+        border-radius: 0px;
+    }
+
+    #Movies_List_Mobile .movie.active {
+        background-image: url('./assets/Hope.png');
+        background-repeat: no-repeat;
+        background-size: 31px;
+        background-position: 0px 10px;
+        transition: all 0.4s;
+    }
+
+    .movie.active .movie_image {
+        filter: grayscale(100%);
+        border: 4px solid rgb(31, 31, 31);
+        border-radius: 0px;
+    }
+    
+    .movie.active:before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -1;
+    }
+    
+    .movie.active:after {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -1;
+        filter: blur(40px);
+    }
+    
+    .movie.active:before, .movie.active:after {
+        background: linear-gradient(235deg, #7c7b7b, #0c0606, #000000);
+    }
+
+    .movie button {
+        margin: 25px auto;
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="PageTitle"></title>
+    <meta name="description" content="Plataforma da Disney+" />
+    <link rel="shortcut icon" type="image/jpg" href="./assets/Disney_Favicon.png"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <!-- LinkedIn and GitHub: itvinl -->
+</head>
+<body>
+    <div id="app">
+        <div class="app_image">
+            <img
+            loading="lazy"
+            alt="Imagem do Filme em Destaque"
+            src="https://image.tmdb.org/t/p/original/k6EOrckWFuz7I4z4wiRwz8zsj4H.png">
+        </div>
+        <header>
+            <a class="pointerlogo">
+                <input type="checkbox" id="btnimg" onclick="SoundPlayLogo()">
+                <label for="btnimg">
+                    <img id="logo" tabindex="0" src="./assets/Logo_Disney_StarWars.png" alt="Logo da Disney+">
+                </label>
+                <audio id="SoundEffectLogo">
+                    <source src="./sounds/Star_Wars_Soundtrack.mp3" type="audio/mp3">
+                </audio>
+            </a>
+            <button type="button" class="button_menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <main>
+            <section class="feature_movie">
+                <div class="rating">
+                    <img src="./assets/logo-imdb.png" alt="Logo da IMDB">
+                    <strong></strong>
+                </div>
+                <span></span>
+                <h1></h1>
+                <p></p>
+                <div class="buttons">
+                    <button class="watch" onmouseleave="Pause2()" onmouseover="Play2()">
+                        <audio id="SoundEffectPlay">
+                            <source src="./sounds/Star_Wars_Lightsaber.mp3" type="audio/mp3">
+                        </audio>
+                        <audio id="SoundEffectPlayLeave">
+                            <source src="./sounds/Star_Wars_Lightsaber_2.mp3" type="audio/mp3">
+                        </audio>
+                        <img src="./assets/icon-play.png" alt="Ícone de Play">
+                        ASSISTIR
+                    </button>
+                    <section class="trailer">
+                        <button onmouseleave="Pause()" onmouseover="Play()">
+                            <audio id="SoundEffect">
+                                <source src="./sounds/Sound_Effects _Star_Wars_Combat.mp3" type="audio/mp3">
+                            </audio>
+                            <audio id="SoundEffectLeave">
+                                <source src="./sounds/Sound_Effects _Star_Wars_Combat_2.mp3" type="audio/mp3">
+                            </audio>
+                            <img src="./assets/X-Wing.png" alt="Ícone de Trailer">
+                            TRAILER
+                        </button>
+                    </section>
+                </div>
+            </section>
+            <aside class="movies">
+                <h2>Filmes</h2>
+                <div>
+                    <ul id="Movies_List">
+                    </ul>
+                </div>
+            </aside>
+            <nav class="navigation">
+                <h2>Filmes</h2>
+                <ul id="Movies_List_Mobile">
+                </ul>
+            </nav>
+        </main>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
