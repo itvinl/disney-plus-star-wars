@@ -1,10 +1,11 @@
 <h1 align="center">
-  Recriação da Interface do Disney+ na Temática Star Wars
+  Recriação da Interface do Disney+ na Temática Star Wars com Design Responsivo
 </h1>
 
 
-<p align="center">
-  <img src="github/Interface.png" width="100%" />
+<p>
+  <img src="github/Interface.png" width="78%" align="left"/>
+  <img src="github/Interface_Mobile.png" width="20%"/>
 </p>
 
 ## 🖥 Descrição do Projeto
