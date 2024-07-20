@@ -1,5 +1,5 @@
 <h1 align="center">
-  Recriação da Interface do Disney Plus na Temática Star Wars
+  Recriação da Interface do Disney+ na Temática Star Wars
 </h1>
 
 
