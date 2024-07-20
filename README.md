@@ -4,7 +4,7 @@
 
 
 <p>
-  <img src="github/Interface.png" width="78%" align="left"/>
+  <img src="github/Interface.png" width="75%" align="left"/>
   <img src="github/Interface_Mobile.png" width="20%"/>
 </p>
 
