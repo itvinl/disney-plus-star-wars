@@ -1,5 +1,5 @@
 <h1 align="center">
-  Recriação da Interface do Disney+ na Temática Star Wars com Design Responsivo
+  Recreation of the Disney+ Interface in a Star Wars Theme with Responsive Design
 </h1></br>
 
 <div align="center">
@@ -7,13 +7,13 @@
   <img src="github/Interface_Mobile.png" width="17.3%"/>
 </div></br>
 
-## 🖥 Descrição do Projeto
+## 🖥 Project Description
 
-Este projeto é uma recriação da interface da **Disney+ na temática de Star Wars**, nele é utilizado _HTML_, _CSS_, _JavaScript_ e a _API_ da [**TMDB**](https://www.themoviedb.org/documentation/api), onde é fornecido todos os dados dos filmes.
+This project is a recreation of the **Disney+ interface in the Star Wars theme**, using _HTML_, _CSS_, _JavaScript_ and the _API_ from [**TMDB**](https://www.themoviedb.org/documentation/api), where all movie data is provided.
 
-Nele foi utilizado um protótipo do [**Itai Bracha**](https://www.figma.com/@itaibracha), e um tutorial do [**Leo Vargas**](https://github.com/leovargasdev) como base.
+It used a prototype from [**Itai Bracha**](https://www.figma.com/@itaibracha), and a tutorial from [**Leo Vargas**](https://github.com/leovargasdev) as a base.
 
-## ⌨️ Tecnologias Utilizadas
+## ⌨️ Technologies Used
 
 - HTML
 - CSS
