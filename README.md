@@ -19,4 +19,4 @@ It used a prototype from [**Itai Bracha**](https://www.figma.com/@itaibracha), a
 - CSS
 - JavaScript
 - Responsive Design
-- API da [**TMDB**](https://www.themoviedb.org/documentation/api)
+- [**TMDB**](https://www.themoviedb.org/documentation/api) API.
